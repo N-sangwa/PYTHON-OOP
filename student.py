@@ -4,7 +4,7 @@ class Student:
         self.last_name  = last_name
         self.age = age
     def full_name(self):
-        return (self.first_name, self.last_name)
+        return self.first_name +" "+ self.last_name
 
     def year_of_birth(self):
         return f"Hello {self.first_name}, you were born in {2022 - self.age}."
