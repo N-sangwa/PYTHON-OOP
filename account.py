@@ -62,6 +62,8 @@ class Account:
 
     def full_statements(self):
         full_statements_list = self.deposits + self.withdrawals
+        full_statements_list.sort(key = lambda statement : statement['date'],reverse = True)
+
         # sorted_full_statements_list =sorted(full_statements_list)  
         for statement in full_statements_list:
             if statement in self.deposits:
